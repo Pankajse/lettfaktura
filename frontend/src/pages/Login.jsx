@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import '../styles/login.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import CustomButton from '../components/ui/CustomButton';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -20,6 +21,7 @@ const Login = () => {
                 password
             });
             if (response.status === 400) {
+                localStorage.setItem("token",response.data.token);
                 navigate("/pricelist");
                 setEmail("");
                 setPassword("");
@@ -57,20 +59,21 @@ const Login = () => {
                     />
                 </div>
                 <p className='message'>{message}</p>
-                <button className='login-button' type='submit'>Log in</button>
-                <div className=''>
-                    <button type='button' className='secondary-buttons'>Register</button>
-                    <button type='button' className='secondary-buttons'>Forgotten password?</button>
+                <CustomButton variant="primary" text="Login" type='submit' />
+                {/* buttons below login  */}
+                <div className='sec-buttons-container'>
+                    <CustomButton variant="ghost" type='button' text="Register" />
+                    <CustomButton variant="ghost" type='button' text="Forgotten password?" />
                 </div>
             </form>
-
+            {/* footer  */}
             <footer className='footer'>
                 <div className='footer-header-button'>
                     <h2>123 Fakturera</h2>
-                    <div className='footer-buttons-container'>
-                        <button className='secondary-buttons'>Home</button>
-                        <button className='secondary-buttons'>Order</button>
-                        <button className='secondary-buttons'>Contact us</button>
+                    <div className='sec-buttons-container'>
+                        <CustomButton variant="ghost" text="Home" />
+                        <CustomButton variant="ghost" text="Order" />
+                        <CustomButton variant="ghost" text="Contact us" />
                     </div>
                 </div>
                 <hr />

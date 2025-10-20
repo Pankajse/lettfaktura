@@ -1,0 +1,22 @@
+
+#custom-button:hover {
+    cursor: pointer;
+}
+
+.primary {
+    max-width: 250px;
+    width: 90%;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(32, 170, 32);
+    color: white;
+    padding: 0.9rem 0.4rem;
+    margin: 20px 10px;
+    font-size: 1rem;
+}
+
+.ghost {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+}

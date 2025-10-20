@@ -78,7 +78,7 @@
     cursor: pointer;
 }
 
-/* 📱 Mobile view */
+/*  Mobile view */
 @media (max-width: 1300px) {
     .nav-logo {
         display: none;
@@ -92,7 +92,7 @@
     .nav-links {
         position: absolute;
         top: 60px;
-        left: -100%;
+        left: -150%;
         background: white;
         width: 300px;
         color: black;

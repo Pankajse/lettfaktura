@@ -17,7 +17,7 @@ function Navbar() {
                 <img
                     src="diamond.png"
                     alt="logo"
-                    className={`nav-logo ${menuOpen ? 'hidden' : ''}`}
+                    className="nav-logo"
                 />
                 {/* Close and open Icon */}
                 <div className="menu-icon" onClick={toggleMenu}>
