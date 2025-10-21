@@ -1,0 +1,179 @@
+.pricelist-article-row {
+    display: flex;
+    align-items: center;
+    padding: 8px 0px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.articles-container{
+    height: 70vh;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    overflow-y: scroll;
+}
+
+.pricelist-header-row {
+    font-weight: 600;
+    color: gray;
+    font-size: 0.9rem;
+    padding-bottom: 12px;
+}
+
+.sort-arrow {
+    color: #3b82f6;
+    margin-left: 4px;
+}
+
+.article-cell {
+    padding: 4px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.cell-content {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 2px solid skyblue;
+    outline: skyblue;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.triple-dot {
+    font-size: 1rem;
+    font-weight: 700;
+    color: skyblue;
+}
+
+/* initially only product/service and price visible */
+
+.unit,
+.in-stock,
+.description {
+    display: none;
+}
+
+.article-no {
+    flex: 0 0 120px;
+    text-align: left;
+    display: none;
+}
+
+.in-price {
+    flex: 0 0 120px;
+    text-align: left;
+    display: none;
+}
+
+.product-service {
+    flex: 1 1 230px;
+    /* max-width: 250px;
+    min-width: 150px; */
+}
+
+.price {
+    flex: 0 0 110px;
+    text-align: left;
+}
+
+.options-cell {
+    flex: 0 0 50px;
+    text-align: center;
+}
+
+
+/* article-no, product/service, price, unit visible*/
+@media (min-width: 600px) {
+    .article-no {
+        display: block;
+        flex: 0 1 120px;
+    }
+
+    .triple-dot {
+        font-size: 2rem;
+        font-weight: 700;
+        color: skyblue;
+    }
+
+
+    .unit {
+        display: block;
+        flex: 0 1 140px;
+    }
+
+    .product-service {
+        display: block;
+    }
+
+    .price {
+        display: block;
+    }
+}
+
+
+/* Show only product/service and price */
+@media (min-width: 800px) {
+
+    .article-no,
+    .unit,
+    .in-price,
+    .in-stock,
+    .description {
+        display: none;
+    }
+
+    .product-service,
+    .price {
+        display: block;
+    }
+}
+
+/* Hide description and in-stock */
+@media (min-width: 1100px) {
+    .product-service {
+        max-width: 250px;
+        min-width: 150px;
+    }
+
+    .article-no,
+    .unit,
+    .in-price {
+        display: block;
+    }
+
+    .in-stock,
+    .description {
+        display: none;
+    }
+}
+
+/* above 1300 al shown */
+@media (min-width: 1300px) {
+
+    .article-no,
+    .product-service,
+    .in-price,
+    .price,
+    .unit {
+        display: block;
+    }
+
+    .description {
+        display: block;
+        flex: 1 0 300px;
+    }
+
+    .in-stock {
+        display: block;
+        flex: 0 0 100px;
+    }
+}

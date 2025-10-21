@@ -1,0 +1,26 @@
+.search-input-container{
+    border: 2px solid rgb(216, 206, 206);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.search-input {
+    flex: 1;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.search-button {
+    font-size: 1rem;
+    color: skyblue;
+    padding: 5px 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+}

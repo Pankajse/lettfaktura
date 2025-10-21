@@ -1,10 +1,10 @@
 .sidebar {
-  width: 240px;
-  background: #ffffff;
+  width: 280px;
+  background: white;
   /* height: 100vh;  */
   /* border-right: 1px solid gray; */
   box-shadow: 7px -3px 20px 0px rgb(237, 234, 234);
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -12,8 +12,8 @@
 .sidebar-title {
   font-size: 1rem;
   font-weight: 600;
-  color: #333;
-  margin-bottom: 1.5rem;
+  color: gray;
+  margin-bottom: 2px;
   text-align: center;
   border-bottom: 1px solid gray;
   padding-bottom: 0.5rem;
@@ -28,10 +28,10 @@
 .sidebar-item {
   display: flex;
   align-items: center;
-  padding: 0.6rem 0.8rem;
+  padding: 9px;
   border-radius: 8px;
   margin: 0.3rem 0;
-  color: #555;
+  color: gray;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -40,20 +40,26 @@
   background-color: #f5f5f5;
 }
 
-.sidebar-item.active {
-  background-color: #e6f4ff;
-  color: #0078ff;
-  font-weight: 600;
-}
 
 .sidebar-item .icon {
   margin-right: 0.75rem;
   display: flex;
   align-items: center;
 }
+.dot-sidebar{
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border-radius: 100%;
+  margin-right: 2px;
+}
 
-.sidebar-item.active .icon svg {
-  stroke: #0078ff;
+.dot-sidebar.active{
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 100%;
+  margin-right: 2px;
 }
 
 .sidebar-item .label {
@@ -64,6 +70,15 @@
 
 @media (max-width: 1100px) {
   .sidebar {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    left: -330px;
+    transition: 0.3s ease-in-out;
+  }
+  .sidebar.active {
+    /* display: flex; */
+    position: fixed;  /* not sure */
+    left: 0px;
+    transition: 0.3s ease-in-out;
   }
 }

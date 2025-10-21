@@ -1,7 +1,7 @@
 import { Menu } from 'lucide-react'
 import './../styles/Header.css'
 
-const Header = () => {
+const Header = ({ sidebarOpen, setSidebarOpen }) => {
     return (
         <div className='header-container'>
             {/* it include profile pic , name, address  */}
@@ -12,7 +12,9 @@ const Header = () => {
                     <h6>Delhi, India</h6>
                 </div>
             </div>
-            <Menu className='sidebar-menu-icon' size={28} />
+            <button className='sidebar-menu-icon' onClick={() => { setSidebarOpen(!sidebarOpen) }}>
+                <Menu size={28} />
+            </button>
             {/* language and flag  */}
             <div className='language-container'>
                 <h5>Norsk Bokmal</h5>

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
 import { Menu, X } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [langMenuOpen, setLangMenuOpen] = useState(false);
-    const [language, setLanguage] = useState("English");
+    const {language, setLanguage} = useLanguage();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);

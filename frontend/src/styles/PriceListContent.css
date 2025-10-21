@@ -1,0 +1,93 @@
+.price-list-container {
+    padding: 20px 20px;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+.pricelist-header-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    /* border: 2px solid green; */
+}
+
+.search-input-parent {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.pricelist-filter-buttons {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-button-text {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .pricelist-header-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        gap: 20px;
+        width: 100%;
+        /* border: 2px solid green; */
+    }
+
+    .search-input-parent {
+        width: auto;
+    }
+}
+
+@media (min-width: 800px) {
+    .price-list-container {
+        padding: 20px 45px;
+    }
+
+    .pricelist-header-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        /* border: 2px solid green; */
+    }
+
+    .search-input-parent {
+        width: 100%;
+    }
+
+    .pricelist-filter-buttons {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .filter-button-text {
+        display: block;
+    }
+
+    .search-input-parent {
+        width: auto;
+    }
+
+    .pricelist-header-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+    }
+
+    .pricelist-filter-buttons {
+        width: auto;
+    }
+}

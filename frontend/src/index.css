@@ -3,3 +3,6 @@
   margin: 0px;
   font-family: sans-serif;
 }
+body{
+  overflow: hidden;
+}

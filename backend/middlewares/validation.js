@@ -17,10 +17,11 @@ const userSigninSchema = z.object({
 });
 
 const productSchema = z.object({
+    articleNo: z.number().min(1, "Article number is required"),
     productName: z.string().min(1, "Product name is required"),
     inPrice: z.number().min(0, "In price must be a positive number"),
     price : z.number().min(0, "Price must be a positive number"),
-    unit: z.enum(["Kilometers/hour", "Miles/hour", "Kg", "Pcs", "Liters"], "Invalid unit"),
+    unit: z.string().min(1, "unit is required"),
     inStock: z.number().min(0, "In stock must be a positive number"),
     description: z.string().min(1, "Description is required"),
 });

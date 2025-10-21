@@ -5,6 +5,9 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 10px 40px;
+    box-sizing: border-box;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .profile-pic {
@@ -21,6 +24,8 @@
 
 .sidebar-menu-icon {
     display: block;
+    background-color: transparent;
+    border: none;
 }
 
 .language-container {

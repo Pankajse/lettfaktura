@@ -34,21 +34,13 @@ model Terms{
 
 model Product{
   id       Int @id @default(autoincrement())
-  articleNo      Int @unique @default(autoincrement())
+  articleNo      Int
   productName    String
   inPrice        Int
   price          Int
-  unit           Units
+  unit           String
   inStock        Int
   description    String
   ownerId        Int
   owner          User @relation(fields: [ownerId],references: [id])
-}
-
-enum Units{
-  Kilometers_per_hour
-  Miles_per_hour
-  Kg
-  Pcs
-  Liters
 }

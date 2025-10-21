@@ -20,7 +20,7 @@ const Login = () => {
                 email,
                 password
             });
-            if (response.status === 400) {
+            if (response.status === 200) {
                 localStorage.setItem("token",response.data.token);
                 navigate("/pricelist");
                 setEmail("");
@@ -41,7 +41,7 @@ const Login = () => {
     }
     return (
         <div className='login-container'>
-            <Navbar />
+            {/* <Navbar /> */}
             <form className='login-form' onSubmit={onLoginHandler}>
                 <h2 className='heading'>Log in</h2>
                 <div className='field-container'>
