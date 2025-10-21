@@ -1,12 +1,13 @@
 .term-container {
-    background-image: url("login.jpg");
-    background-size:cover;
+    background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
+    /* background-image: url("login.jpg"); */
+    background-size: cover;
     background-attachment: fixed;
     padding: 20px 1rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    position:static;
+    position: static;
     align-items: center;
     padding-top: 100px;
     gap: 20px;

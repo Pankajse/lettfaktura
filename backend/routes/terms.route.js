@@ -1,5 +1,5 @@
 const express = require("express");
-const { updateTerms, getTerms } = require("../controllers/terms.controller");
+const { getTerms } = require("../controllers/terms.controller");
 const router = express.Router();
 
 router.get("/getTerms", getTerms);

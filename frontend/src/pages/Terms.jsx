@@ -17,7 +17,7 @@ const Terms = () => {
           language
         }
       });
-      setTerms(response.data);
+      setTerms(response.data.terms);
     };
 
     fetchTerms();
