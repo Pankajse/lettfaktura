@@ -8,6 +8,7 @@
     flex-direction: column;
     position:static;
     align-items: center;
+    padding-top: 100px;
     gap: 20px;
 }
 

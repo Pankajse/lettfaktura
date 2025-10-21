@@ -2,6 +2,8 @@ import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import SideMenu from "./components/SideMenu";
+import './styles/Layout.css';
+import { useState } from "react";
 
 
 export const LoginLayout = () => {
@@ -18,16 +20,14 @@ export const LoginLayout = () => {
 
 
 export const DashboardLayout = () => {
+    const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    <div className="dashboard-container" style={{ display: "flex" }}>
-      <SideMenu />
-      <div style={{ flex: 1 }}>
-        <Header />
-        <main>
-            <Outlet />
-        </main>
+    <div className="Layout-container">
+      <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <div style={{display: "flex"}}>
+        <SideMenu sidebarOpen={sidebarOpen} />
+        <Outlet />
       </div>
     </div>
   );
 };
-
