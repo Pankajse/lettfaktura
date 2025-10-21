@@ -9,7 +9,7 @@ const Articles = () => {
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/v1/product/getAll`, {
+                const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/product/getAll`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
                     },
@@ -91,7 +91,7 @@ const ArticleComponent = ({ id, articleNo, productName, inPrice, price, unit, in
         try {
 
             await axios.put(
-                `${import.meta.env.VITE_BASE_URL}/v1/product/update/${id}`,
+                `${import.meta.env.VITE_BASE_URL}/api/v1/product/update/${id}`,
                 {
                     [name]: value
                 },
