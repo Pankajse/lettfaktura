@@ -1,6 +1,5 @@
 .login-container {
-    background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
-    /* background-image: url("login.jpg"); */
+    background-image: url("/login.jpg");
     background-size: cover;
     height: 95vh;
     /* width: 100%; */

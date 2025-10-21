@@ -1,7 +1,7 @@
 .sidebar {
   width: 280px;
   background: white;
-  /* height: 100vh;  */
+  height: 100vh; 
   /* border-right: 1px solid gray; */
   box-shadow: 7px -3px 20px 0px rgb(237, 234, 234);
   padding: 1rem 1rem;
