@@ -28,11 +28,11 @@ function Navbar() {
                 {/* Navbar buttons*/}
                 <div className='navbar-options'>
                     <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Order</a></li>
-                        <li><a href="#">Our Customers</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a>Home</a></li>
+                        <li><a>Order</a></li>
+                        <li><a>Our Customers</a></li>
+                        <li><a>About us</a></li>
+                        <li><a>Contact Us</a></li>
                     </ul>
                     <div className="nav-lang-button">
                         <div className='nav-lang'

@@ -24,3 +24,8 @@
     border-bottom-right-radius: 10px;
     border: none;
 }
+
+.search-button:hover {
+    color: rgb(95, 177, 210);
+    cursor: pointer;
+}

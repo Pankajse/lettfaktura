@@ -12,7 +12,7 @@ const Terms = () => {
   const { language } = useLanguage();
   useEffect(() => {
     const fetchTerms = async () => {
-      const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/terms/getTerms`,{
+      const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/v1/terms/getTerms`,{
         params:{
           language
         }

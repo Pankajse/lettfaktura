@@ -29,6 +29,12 @@
     min-width: 70px;
 }
 
+.secondary:hover{
+    box-shadow: 0px 0px 10px 2px gray;
+    cursor: pointer;
+    background-color:#f5f5f5;
+}
+
 .ghost {
     border: none;
     background-color: transparent;
